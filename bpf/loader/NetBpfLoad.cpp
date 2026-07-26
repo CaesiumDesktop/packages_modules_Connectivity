@@ -1601,7 +1601,6 @@ static int doLoad(char** argv, char * const envp[]) {
     // 6.6 is highest version supported by Android V, so this is effectively W+ (sdk=36+)
     if (isKernel32Bit() && isAtLeastKernelVersion(6, 7)) {
         ALOGE("Android platform with 32 bit kernel version >= 6.7.0 is unsupported");
-        return 10;
     }
 
     // Various known ABI layout issues, particularly wrt. bpf and ipsec/xfrm.
