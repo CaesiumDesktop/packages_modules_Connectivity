@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4335cbde_778e20b8",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 15060
+      },
+      "writtenOn": "2026-10-11T22:24:02Z",
+      "side": 1,
+      "message": "Was any of the code, testing or the commit message made by AI? If so, can you label it as such please?",
+      "revId": "84cacf84324b36d7334fbd39f733aec282117071",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e1600f8d_26a8d2fc",
+        "filename": "service/src/com/android/server/ConnectivityService.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 13367,
+      "author": {
+        "id": 15060
+      },
+      "writtenOn": "2026-10-11T22:24:02Z",
+      "side": 1,
+      "message": "It doesn\u0027t seem clear to me why we exclude VPN cases from this? Do they have special handling that causes this behaviour to not apply to them?",
+      "range": {
+        "startLine": 13367,
+        "startChar": 16,
+        "endLine": 13367,
+        "endChar": 37
+      },
+      "revId": "84cacf84324b36d7334fbd39f733aec282117071",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
