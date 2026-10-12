@@ -18,6 +18,23 @@
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "02ccb5bb_bb9bb3b4",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 15060
+      },
+      "writtenOn": "2026-10-12T01:43:00Z",
+      "side": 1,
+      "message": "I think it would be safe to merge. Worst case it should be a no-op and best case it solves the reported issue according to the tests",
+      "revId": "84cacf84324b36d7334fbd39f733aec282117071",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "e1600f8d_26a8d2fc",
@@ -31,6 +48,30 @@
       "writtenOn": "2026-10-11T22:24:02Z",
       "side": 1,
       "message": "It doesn\u0027t seem clear to me why we exclude VPN cases from this? Do they have special handling that causes this behaviour to not apply to them?",
+      "range": {
+        "startLine": 13367,
+        "startChar": 16,
+        "endLine": 13367,
+        "endChar": 37
+      },
+      "revId": "84cacf84324b36d7334fbd39f733aec282117071",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "690684b7_559957c3",
+        "filename": "service/src/com/android/server/ConnectivityService.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 13367,
+      "author": {
+        "id": 15060
+      },
+      "writtenOn": "2026-10-12T01:43:00Z",
+      "side": 1,
+      "message": "To be clear, if VPNs indeed don\u0027t exhibit the behaviour or need exemption for a reason I think it would be important to know why at least in the commit message if not here in a code comment. If so, I\u0027d like to inspect why and see if there needs to be alignment in behaviour or if the exception is reasonable",
+      "parentUuid": "e1600f8d_26a8d2fc",
       "range": {
         "startLine": 13367,
         "startChar": 16,
