@@ -37,6 +37,23 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "ffbace0f_674e5667",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2026-10-12T15:36:02Z",
+      "side": 1,
+      "message": "@info@cross7.de need your response here to Oliver\u0027s comments before we move forward.",
+      "revId": "84cacf84324b36d7334fbd39f733aec282117071",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "e1600f8d_26a8d2fc",
         "filename": "service/src/com/android/server/ConnectivityService.java",
         "patchSetId": 1
