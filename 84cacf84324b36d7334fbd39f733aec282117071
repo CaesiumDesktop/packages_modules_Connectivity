@@ -71,6 +71,42 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "8c17a218_d6aec78c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 38201
+      },
+      "writtenOn": "2026-10-13T02:59:14Z",
+      "side": 1,
+      "message": "already answerd. see above",
+      "parentUuid": "ffbace0f_674e5667",
+      "revId": "84cacf84324b36d7334fbd39f733aec282117071",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3fbc2e09_69377baf",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 38201
+      },
+      "writtenOn": "2026-10-13T02:59:14Z",
+      "side": 1,
+      "message": "Except for the testing, everything was done by AI.",
+      "parentUuid": "4335cbde_778e20b8",
+      "revId": "84cacf84324b36d7334fbd39f733aec282117071",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "e1600f8d_26a8d2fc",
         "filename": "service/src/com/android/server/ConnectivityService.java",
         "patchSetId": 1
@@ -106,6 +142,30 @@
       "side": 1,
       "message": "To be clear, if VPNs indeed don\u0027t exhibit the behaviour or need exemption for a reason I think it would be important to know why at least in the commit message if not here in a code comment. If so, I\u0027d like to inspect why and see if there needs to be alignment in behaviour or if the exception is reasonable",
       "parentUuid": "e1600f8d_26a8d2fc",
+      "range": {
+        "startLine": 13367,
+        "startChar": 16,
+        "endLine": 13367,
+        "endChar": 37
+      },
+      "revId": "84cacf84324b36d7334fbd39f733aec282117071",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "230d24d4_e1d77f3f",
+        "filename": "service/src/com/android/server/ConnectivityService.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 13367,
+      "author": {
+        "id": 38201
+      },
+      "writtenOn": "2026-10-13T02:59:14Z",
+      "side": 1,
+      "message": "The VPN exclusion was intentional, but it was a conservative scope decision rather than based on a proven VPN-specific requirement.\n\nThe issue I reproduced was on a physical cellular network. The failure path I traced was the non-VPN path where `updateAllowedUidsForNetwork()` can return early while the network is not yet connected, leaving the corresponding allowlist state missing when the network later becomes the default.\n\nThe proposed change therefore only retries that specific non-VPN update when the network reaches `CONNECTED`. I deliberately kept the patch limited to the path that was actually reproduced and tested, rather than changing VPN behaviour as well without having validated the same failure mode there.\n\nSo `!networkAgent.isVPN()` is not meant to imply that VPNs fundamentally require different handling. It is simply there to keep this fix minimal and avoid speculative changes outside the scope of the reported issue.\n\nIf maintainers conclude that the behaviour should be generalized to VPNs as well, that would be a reasonable follow-up or adjustment on the maintainer side; I would prefer to keep this proposed fix scoped to the case I reproduced and tested.",
+      "parentUuid": "690684b7_559957c3",
       "range": {
         "startLine": 13367,
         "startChar": 16,
